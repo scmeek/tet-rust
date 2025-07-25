@@ -1,6 +1,6 @@
-use crate::user_interfaces;
-use std::io;
+mod settings;
+mod state;
 
-pub fn main() -> io::Result<()> {
-    user_interfaces::terminal::main()
-}
+// Re-export from directory to root of module
+pub use self::settings::*;
+pub use self::state::*;
